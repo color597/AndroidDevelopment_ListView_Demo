@@ -31,7 +31,7 @@ public class UserAdapter extends ArrayAdapter<User> {
 
         if (convertView == null) {
             userViewHolder = new UserViewHolder();
-            view = LayoutInflater.from(getContext()).inflate(R.layout.item_view, parent, false);
+            view = LayoutInflater.from(getContext()).inflate(this.resId, parent, false);
             userViewHolder.mNameView = view.findViewById(R.id.name);
             userViewHolder.mAgeView = view.findViewById(R.id.age);
 
