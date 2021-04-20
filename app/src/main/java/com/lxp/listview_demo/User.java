@@ -2,27 +2,27 @@ package com.lxp.listview_demo;
 
 public class User {
 
-    private String mName;
-    private int mAge;
+    private String name;
+    private int age;
 
     public User(String name, int age) {
-        this.mName = name;
-        this.mAge = age;
+        this.name = name;
+        this.age = age;
     }
 
     public String getName() {
-        return this.mName;
+        return this.name;
     }
 
     public void setName(String name) {
-        this.mName = name;
+        this.name = name;
     }
 
     public int getAge() {
-        return this.mAge;
+        return this.age;
     }
 
     public void setAge(int age) {
-        this.mAge = age;
+        this.age = age;
     }
 }
