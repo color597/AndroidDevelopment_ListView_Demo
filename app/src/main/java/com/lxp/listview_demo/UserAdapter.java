@@ -27,31 +27,21 @@ public class UserAdapter extends ArrayAdapter<User> {
         User user = getItem(position);
 
         View view;
-        UserViewHolder userViewHolder;
 
         if (convertView == null) {
-            userViewHolder = new UserViewHolder();
             view = LayoutInflater.from(getContext()).inflate(this.resId, parent, false);
-            userViewHolder.mNameView = view.findViewById(R.id.name);
-            userViewHolder.mAgeView = view.findViewById(R.id.age);
-
-            view.setTag(userViewHolder);
         }
         else{
             view = convertView;
-            userViewHolder = (UserViewHolder) view.getTag();
         }
+        TextView nameView = view.findViewById(R.id.name);
+        TextView ageView = view.findViewById(R.id.age);
 
-        userViewHolder.mNameView.setText(user.getName());
+        nameView.setText(user.getName());
         // 由于获取到的数据是int类型，直接使用的话，setText()方法会把数据当成资源ID，故需要用String.valueOf()方法将其转成String类型
-        userViewHolder.mAgeView.setText(String.valueOf(user.getAge()));
+        ageView.setText(String.valueOf(user.getAge()));
 
         return view;
-    }
-
-    static class UserViewHolder {
-        private TextView mNameView;
-        private TextView mAgeView;
     }
 
 }
